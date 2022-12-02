@@ -1,7 +1,7 @@
 package TP3_1;
 
 public class ObjetPostal {
-	public ObjetPostal(String origine, String destination, int codePostal, double poids, double volume,
+	public ObjetPostal(String origine, String destination, String codePostal, double poids, double volume,
 			Recommandation recommandation) {
 		super();
 		this.origine = origine;
@@ -13,7 +13,7 @@ public class ObjetPostal {
 	}
 	private String origine;
 	private String destination;
-	private int codePostal;
+	private String codePostal;
 	private double poids;
 	private double volume;
 	private Recommandation recommandation;
@@ -31,10 +31,10 @@ public class ObjetPostal {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public int getCodePostal() {
+	public String getCodePostal() {
 		return codePostal;
 	}
-	public void setCodePostal(int codePostal) {
+	public void setCodePostal(String codePostal) {
 		this.codePostal = codePostal;
 	}
 	public double getPoids() {
@@ -56,11 +56,12 @@ public class ObjetPostal {
 		this.recommandation = recommandation;
 	}
 	
+	abstract public 
 	public String toString() {
 		return"L'emetteur est " +this.origine+ ",le recepteur est " +this.destination+ "\n"+
-				" le code postale du recepteur est " +this.codePostal+ "\n"+
-				",  le poids du l'objet est " +this.poids+ "g"+"\n"+
-				" le volume est " +this.volume+ "m3," +"\n"+
+				"le code postale du recepteur est " +this.codePostal+ "\n"+
+				"le poids du l'objet est " +this.poids+ "g"+"\n"+
+				"le volume est " +this.volume+ "m3," +"\n"+
 				 "le taux de recommandation est " +this.recommandation.convertirRecomEnInt(recommandation);
 	}
 }

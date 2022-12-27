@@ -56,7 +56,7 @@ public class ObjetPostal {
 		this.recommandation = recommandation;
 	}
 	
-	abstract public 
+	
 	public String toString() {
 		return"L'emetteur est " +this.origine+ ",le recepteur est " +this.destination+ "\n"+
 				"le code postale du recepteur est " +this.codePostal+ "\n"+
